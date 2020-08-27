@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css'
-import Sidebar from './components/Sidebar/Sidebar'
 import NewSidebar from './components/NewSidebar/NewSidebar'
 
 function App() {
@@ -44,7 +43,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NewSidebar></NewSidebar>
+        <NewSidebar sideBarJSON={sideBarObject}></NewSidebar>
       </div>
       <Switch></Switch>
     </Router>
