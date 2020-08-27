@@ -1,30 +1,54 @@
-import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import "./App.css";
-import logo from "./logo.svg";
+import React from 'react'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import './App.css'
+import Sidebar from './components/Sidebar/Sidebar'
+import NewSidebar from './components/NewSidebar/NewSidebar'
 
 function App() {
+  const sideBarObject = {
+    header: 'URL Shortener',
+    routeTree: [
+      {
+        children: [
+          { name: 'Progress', route: '/p' },
+          { name: 'Contributions', route: '/r' },
+          { name: 'Activity', route: '/o' },
+        ],
+        icon: 'home',
+        name: 'Overview',
+      },
+      {
+        children: [
+          { name: 'Frytol', route: '/lo' },
+          { name: 'Eno Serwaa', route: '/t' },
+          { name: 'Pepsi', route: '/v' },
+          { name: 'Soyabean', route: '/u' },
+        ],
+        icon: 'burn',
+        name: 'Oil',
+      },
+      {
+        children: [
+          { name: 'Sardine', route: '/g' },
+          { name: 'DHall Beast', route: '/j' },
+          { name: 'Last Killer', route: '/d' },
+          { name: 'Brilla', route: '/l' },
+          { name: 'Ant Brain', route: '/e' },
+        ],
+        icon: 'brain',
+        name: 'Minds',
+      },
+    ],
+  }
+
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <NewSidebar></NewSidebar>
       </div>
       <Switch></Switch>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

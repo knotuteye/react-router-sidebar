@@ -1,0 +1,63 @@
+.sidebar-tree {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.sidebar-tree a {
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+}
+
+.sidebar-tree > a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-tree > a > i {
+  margin: 2px 8px;
+}
+
+.sidebar-tree a:hover {
+  background-color: #eee;
+}
+
+.sidebar-tree > div {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-tree > div > a.sub {
+  padding-left: 3rem;
+}
+
+.sidebar-tree > div a.active {
+  color: blue;
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.sidebar-tree .flyout {
+  position: absolute;
+  left: 15rem;
+}
+
+.flyout {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 8rem;
+  padding: 3px;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.flyout > a {
+  text-decoration: none;
+  color: #000000;
+  padding: 3px;
+}
+
+.flyout > a:hover {
+  background-color: #eee;
+}
