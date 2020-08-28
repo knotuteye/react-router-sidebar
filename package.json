@@ -2,7 +2,7 @@
   "name": "react-router-sidebar",
   "description": "A gitlab-style sidebar designed for use with React Router",
   "main": "./dist/Sidebar/Sidebar.js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "babel": {
     "presets": [
