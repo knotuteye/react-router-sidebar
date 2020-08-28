@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar'
-// import Sidebar from 'react-router-sidebar'
+
 
 function App() {
   const sideBarObject = {

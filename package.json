@@ -2,13 +2,14 @@
   "name": "react-router-sidebar",
   "description": "A gitlab-style sidebar designed for use with React Router",
   "main": "./dist/Sidebar/Sidebar.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "babel": {
     "presets": [
       "@babel/preset-react"
     ]
   },
+  "license": "MIT",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

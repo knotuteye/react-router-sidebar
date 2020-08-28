@@ -8565,16 +8565,6 @@ react-router-dom@^5.2.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router-sidebar@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/react-router-sidebar/-/react-router-sidebar-0.1.3.tgz#c0acf1bb01ec684f135b7a1c7f107be22e0e0d68"
-  integrity sha512-en2MsXbQ+XrtCAqX6HCWkGXAZN25/Rig0JcWyCy8V3CCXDICO8lJojZq/bZPj0GEt7Ya4dyYSFwUKazpfdjOww==
-  dependencies:
-    react "^16.13.1"
-    react-dom "^16.13.1"
-    react-router-dom "^5.2.0"
-    react-scripts "3.4.3"
-
 react-router@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.2.0.tgz#424e75641ca8747fbf76e5ecca69781aa37ea293"
