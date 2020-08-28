@@ -3,23 +3,25 @@ import { Link, NavLink } from 'react-router-dom'
 import './Tree.css'
 
 export default function ({ routeTree, showTree, headerOnCLick }) {
-  const [isMouseInFlyout, setIsMouseInFlyout] = useState(false)
-
+  const [showFlyout, setShowFlyout] = useState(false)
   return (
-    <div
-      className="sidebar-tree"
-      style={{
-        borderLeft: showTree ? '3px solid blue' : '3px solid transparent',
-      }}
-    >
+    <div className={`sidebar-tree ${showTree ? 'active' : ''}`}>
       <Link
         to={routeTree.children[0].route}
         onClick={() => {
-          // setShowTreeState(!showTree)
           headerOnCLick()
         }}
+        className="header-link"
+        onMouseEnter={() => {
+          setShowFlyout(true)
+        }}
+        onMouseLeave={() => {
+          setTimeout(() => {
+            setShowFlyout(false)
+          }, 100)
+        }}
         style={{
-          color: showTree ? 'blue' : 'black',
+          color: showTree ? '#4b4ba3' : '#666',
           fontWeight: showTree ? 'bold' : 'normal',
         }}
       >
@@ -27,25 +29,22 @@ export default function ({ routeTree, showTree, headerOnCLick }) {
         <p>{routeTree.name}</p>
       </Link>
 
-      {/* <div className="flyout" style={{ display: showFlyout ? 'flex' : 'none' }}>
+      <div
+        className={showTree ? 'sub' : 'flyout'}
+        style={showFlyout && !showTree ? { display: 'flex' } : {}}
+      >
         {routeTree.children.map((routeTuple) => (
-          <Link to={routeTuple.route}>{routeTuple.name}</Link>
+          <NavLink
+            exact
+            to={routeTuple.route}
+            activeClassName="active"
+            onClick={() => {
+              headerOnCLick()
+            }}
+          >
+            {routeTuple.name}
+          </NavLink>
         ))}
-      </div> */}
-
-      <div className={showTree ? 'sub' : 'flyout'}>
-        {
-          //showTree &&
-          routeTree.children.map((routeTuple) => (
-            <NavLink
-              to={routeTuple.route}
-              activeClassName="active"
-              className="sub"
-            >
-              {routeTuple.name}
-            </NavLink>
-          ))
-        }
       </div>
     </div>
   )

@@ -4,10 +4,8 @@
   align-items: center;
   text-decoration: none;
   color: #000000;
-}
-
-.sidebar-root.active {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .sidebar-root:hover {
@@ -15,8 +13,9 @@
 }
 
 .sidebar-root > div {
-  background-color: #cccccc;
-  padding: 4px 10px;
+  background-color: #eeeeee;
+  padding: 10px 16px;
   border-radius: 5px;
   margin-right: 12px;
+  font-size: 16px;
 }

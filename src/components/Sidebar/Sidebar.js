@@ -5,14 +5,8 @@ import './Sidebar.css'
 
 export default function ({ sideBarObject, initialRoute }) {
   const [indexOfActiveTreeHeader, setIndexOfActiveTreeHeader] = useState(null)
-  // sideBarObject.routeTree.forEach((routeTreeObject, index) => {
-  //   routeTreeObject.children.forEach((routeTuple) => {
-  //     if (routeTuple.route == initialRoute) {
-  //       setIndexOfActiveTreeHeader(index)
-  //     }
-  //   })
-  // })
-  useEffect(() => {
+
+  function rebuildTree() {
     sideBarObject.routeTree.forEach((routeTreeObject, index) => {
       routeTreeObject.children.forEach((routeTuple) => {
         if (routeTuple.route == initialRoute) {
@@ -20,6 +14,9 @@ export default function ({ sideBarObject, initialRoute }) {
         }
       })
     })
+  }
+  useEffect(() => {
+    rebuildTree()
   }, [])
 
   return (
@@ -29,15 +26,13 @@ export default function ({ sideBarObject, initialRoute }) {
           name: sideBarObject.header,
           route: sideBarObject.routeTree[0].children[0].route,
         }}
+        headerOnCLick={rebuildTree}
       ></SidebarRoot>
       {sideBarObject.routeTree.map((routeTreeObject, index) => (
         <Tree
+          key={index}
           routeTree={routeTreeObject}
-          showTree={
-            index == indexOfActiveTreeHeader
-            // &&
-            // typeof indexOfActiveTreeHeader == 'number'
-          }
+          showTree={index == indexOfActiveTreeHeader}
           headerOnCLick={() => {
             setIndexOfActiveTreeHeader(index)
           }}

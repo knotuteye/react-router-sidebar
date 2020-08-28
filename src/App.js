@@ -9,12 +9,12 @@ function App() {
     routeTree: [
       {
         children: [
-          { name: 'Progress', route: '/p' },
+          { name: 'Progress', route: '/' },
           { name: 'Contributions', route: '/r' },
           { name: 'Activity', route: '/o' },
         ],
         icon: 'home',
-        name: 'Overview',
+        name: 'Project Overview',
       },
       {
         children: [
