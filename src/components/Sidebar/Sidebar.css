@@ -2,5 +2,5 @@
   background-color: #fdfdfd;
   min-height: 100vh;
   width: 15rem;
-  box-shadow: 1px 0 10px #80808079;
+  border-right: 2px solid #cccccc;
 }

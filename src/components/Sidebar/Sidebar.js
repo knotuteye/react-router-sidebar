@@ -1,6 +1,6 @@
 import React from 'react'
-import SidebarRoot from '../SidebarRoot/SidebarRoot'
-import Tree from '../Tree/Tree'
+import SidebarRoot from './SidebarRoot/SidebarRoot'
+import Tree from './Tree/Tree'
 import './Sidebar.css'
 
 export default function ({ sideBarObject }) {

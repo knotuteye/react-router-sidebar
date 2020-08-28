@@ -1,0 +1,22 @@
+.sidebar-root {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.sidebar-root.active {
+  font-weight: bold;
+}
+
+.sidebar-root:hover {
+  background-color: #eee;
+}
+
+.sidebar-root > div {
+  background-color: #cccccc;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-right: 12px;
+}
