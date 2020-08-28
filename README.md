@@ -18,17 +18,6 @@ Or using yarn:
 yarn add react-router-sidebar
 ```
 
-## Dependencies
-
-```json
-{
-  "react": "^16.13.1",
-  "react-dom": "^16.13.1",
-  "react-router-dom": "^5.2.0",
-  "react-scripts": "3.4.3"
-}
-```
-
 ## Usage
 
 ```js
@@ -119,6 +108,17 @@ name (the text to show on the tree head), and icon (the Font Awesome Solid icon 
 - The sidebarObject prop value must conform with the structure of the example object above. Failure to conform would lead to unexpected, even, catastrophic results.
 
 - This component renders as a fixed component and takes up 15rem of space in expanded form and 3rem in collapsed form. Please remember to offset your route components accordingly.
+
+## Dependencies
+
+```json
+{
+  "react": "^16.13.1",
+  "react-dom": "^16.13.1",
+  "react-router-dom": "^5.2.0",
+  "react-scripts": "3.4.3"
+}
+```
 
 ## TODO
 
