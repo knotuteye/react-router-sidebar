@@ -19,6 +19,7 @@
   height: 48px;
   justify-content: space-evenly;
   align-items: center;
+  transition: width 300ms ease-in-out 0s;
 }
 
 .collapse:hover {
@@ -28,8 +29,41 @@
 .collapse > i {
   flex: 1;
   text-align: center;
+  animation: fadeIn 800ms ease 100ms 1 normal both;
   font-size: 20px;
 }
 .collapse > p {
+  animation: fadeIn 800ms ease 100ms 1 normal both;
   flex: 3;
+}
+
+@keyframes shrinkAvatar {
+  0% {
+    width: 10rem;
+    height: 10rem;
+  }
+  100% {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@keyframes expandAvatar {
+  0% {
+    width: 3rem;
+    height: 3rem;
+  }
+  100% {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

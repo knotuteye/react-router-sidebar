@@ -34,34 +34,3 @@
   opacity: 0;
   animation: fadeIn 1000ms ease 100ms 1 normal both;
 }
-
-@keyframes shrinkAvatar {
-  0% {
-    width: 10rem;
-    height: 10rem;
-  }
-  100% {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-@keyframes expandAvatar {
-  0% {
-    width: 3rem;
-    height: 3rem;
-  }
-  100% {
-    width: 10rem;
-    height: 10rem;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
