@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
-import Sidebar from './components/Sidebar/Sidebar'
 import './App.css'
+import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
   const sideBarObject = {
