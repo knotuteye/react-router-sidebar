@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .sidebar-tree > div > a.sub {
   padding-left: 3rem;
 }
@@ -37,19 +38,24 @@
   font-weight: bold;
   background-color: #eee;
 }
-
-.sidebar-tree .flyout {
+.sidebar-tree > .flyout {
   position: absolute;
   left: 15rem;
-}
-
-.flyout {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: #fff;
   width: 8rem;
   padding: 3px;
   box-shadow: 1px 1px 2px grey;
+}
+
+@keyframes hideflyout {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+  }
 }
 
 .flyout > a {

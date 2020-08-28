@@ -2,48 +2,40 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './Tree.css'
 
-export default function ({ routeTree, showTree }) {
-  const [showTreeState, setShowTreeState] = useState(showTree)
-  const [showFlyout, setShowFlyout] = useState(false)
+export default function ({ routeTree, showTree, headerOnCLick }) {
   const [isMouseInFlyout, setIsMouseInFlyout] = useState(false)
 
   return (
     <div
       className="sidebar-tree"
       style={{
-        borderLeft: showTreeState ? '3px solid blue' : '3px solid transparent',
+        borderLeft: showTree ? '3px solid blue' : '3px solid transparent',
       }}
     >
       <Link
         to={routeTree.children[0].route}
         onClick={() => {
-          setShowTreeState(!showTreeState)
-        }}
-        onMouseEnter={() => {
-          setShowFlyout(!showTreeState)
-        }}
-        onMouseLeave={() => {
-          setTimeout(() => {
-            setShowFlyout(false || isMouseInFlyout)
-          }, 1000)
+          // setShowTreeState(!showTree)
+          headerOnCLick()
         }}
         style={{
-          color: showTreeState ? 'blue' : 'black',
-          fontWeight: showTreeState ? 'bold' : 'normal',
+          color: showTree ? 'blue' : 'black',
+          fontWeight: showTree ? 'bold' : 'normal',
         }}
       >
         {routeTree.icon && <i className={`fas fa-${routeTree.icon}`}></i>}
         <p>{routeTree.name}</p>
       </Link>
 
-      <div className="flyout" style={{ display: showFlyout ? 'flex' : 'none' }}>
+      {/* <div className="flyout" style={{ display: showFlyout ? 'flex' : 'none' }}>
         {routeTree.children.map((routeTuple) => (
           <Link to={routeTuple.route}>{routeTuple.name}</Link>
         ))}
-      </div>
+      </div> */}
 
-      <div>
-        {showTreeState &&
+      <div className={showTree ? 'sub' : 'flyout'}>
+        {
+          //showTree &&
           routeTree.children.map((routeTuple) => (
             <NavLink
               to={routeTuple.route}
@@ -52,7 +44,8 @@ export default function ({ routeTree, showTree }) {
             >
               {routeTuple.name}
             </NavLink>
-          ))}
+          ))
+        }
       </div>
     </div>
   )

@@ -43,7 +43,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar sideBarObject={sideBarObject}></Sidebar>
+        <Sidebar
+          sideBarObject={sideBarObject}
+          initialRoute={window.location.pathname}
+        ></Sidebar>
       </div>
       <Switch></Switch>
     </Router>
