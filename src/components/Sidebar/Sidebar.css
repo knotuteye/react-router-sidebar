@@ -1,7 +1,9 @@
 .sidebar {
   background-color: #fafafa;
-  min-height: 100vh;
+  height: 100vh;
   border-right: 1px solid #dbdbdb;
+  position: fixed;
+  transition: width 300ms ease-in-out 0s;
 }
 
 .collapse {

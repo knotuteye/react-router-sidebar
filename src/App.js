@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   const sideBarObject = {
     header: 'URL Shortener',
+    avatar: 'http://link-butcher-2.herokuapp.com/MDE2YzE2',
     routeTree: [
       {
         children: [

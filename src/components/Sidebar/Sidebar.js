@@ -29,6 +29,7 @@ export default function ({ sideBarObject, initialRoute }) {
       }}
     >
       <SidebarRoot
+        avatar={sideBarObject.avatar}
         routeTuple={{
           name: sideBarObject.header,
           route: sideBarObject.routeTree[0].children[0].route,

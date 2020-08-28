@@ -1,6 +1,7 @@
 .sidebar-root {
   display: flex;
-  padding: 10px;
+  flex-direction: column;
+  padding: 1.2rem 10px;
   align-items: center;
   text-decoration: none;
   color: #000000;
@@ -14,9 +15,53 @@
 
 .sidebar-root > div {
   background-color: #4b4ba3e3;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: white;
-  padding: 10px 16px;
-  border-radius: 5px;
-  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
   font-size: 16px;
+  width: 10rem;
+  height: 10rem;
+  animation: o 300ms ease-in-out both;
+}
+
+.sidebar-root > p {
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeIn 1000ms ease 100ms 1 normal both;
+}
+
+@keyframes shrinkAvatar {
+  0% {
+    width: 10rem;
+    height: 10rem;
+  }
+  100% {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@keyframes expandAvatar {
+  0% {
+    width: 3rem;
+    height: 3rem;
+  }
+  100% {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
