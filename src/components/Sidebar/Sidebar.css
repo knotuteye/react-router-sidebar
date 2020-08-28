@@ -67,3 +67,157 @@
     opacity: 1;
   }
 }
+
+/* ROOT */
+
+.sidebar-root {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 10px;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sidebar-root:hover {
+  background-color: #eee;
+}
+
+.sidebar-root > div {
+  background-color: #4b4ba3e3;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 16px;
+  width: 10rem;
+  height: 10rem;
+  animation: o 300ms ease-in-out both;
+}
+
+.sidebar-root > p {
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeIn 1000ms ease 100ms 1 normal both;
+}
+
+/* TREE */
+.sidebar-tree {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3px;
+  box-sizing: border-box;
+}
+
+.sidebar-tree.active {
+  padding-left: 0;
+  border-left: 4px #4b4ba3 solid;
+  background-color: #f0f0f0;
+}
+
+.sidebar-tree a {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 0;
+  color: #666666;
+}
+
+.sidebar-tree > a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-tree > a > i {
+  font-size: 16px;
+  margin: 2px 10px 2px 14px;
+}
+
+.sidebar-tree a:hover {
+  background-color: #0000000a;
+  border-left-color: #0000000a;
+}
+
+.sidebar-tree > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-tree > .sub > a {
+  animation: scale-in-center 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 50ms
+    both;
+  padding-left: 3rem;
+}
+
+.sidebar-tree > div a.active {
+  color: #4b4ba3;
+  font-weight: bold;
+  background-color: #e6e6e6;
+}
+.sidebar-tree > .flyout {
+  position: absolute;
+  left: calc(15rem + 2px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 8rem;
+  padding: 3px 0;
+  box-shadow: 1px 1px 2px #c2c2c2;
+}
+
+.sidebar-tree > .collapsed {
+  left: calc(4rem + 2px);
+}
+
+.sidebar-tree > .flyout a {
+  text-decoration: none;
+  color: #303030;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.sidebar-tree.flyout > a:hover {
+  background-color: #eee;
+}
+
+a.header-link {
+  padding: 16px 0;
+}
+
+a.header-link > p {
+  opacity: 0;
+  animation: fadeIn 1000ms ease 100ms 1 normal both;
+}
+
+a.header-link + .flyout {
+  display: none;
+}
+
+a.header-link + .flyout:hover {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
