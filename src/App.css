@@ -1,0 +1,11 @@
+.routeDemo {
+  color: white;
+  font-weight: bold;
+  background-color: #4b4ba3e3;
+  text-shadow: 10px 10px #0000006b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+}

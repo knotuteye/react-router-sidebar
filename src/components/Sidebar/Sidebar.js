@@ -8,6 +8,7 @@ function SidebarRoot({ routeTuple, headerOnCLick, collapsed, avatar }) {
       className="sidebar-root"
       activeClassName="active"
       to={routeTuple.route}
+      
       onClick={() => {
         headerOnCLick(routeTuple.route)
       }}

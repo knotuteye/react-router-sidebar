@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the sample route tree correctly 1`] = `
+<div
+  className="sidebar"
+  style={
+    Object {
+      "width": "15rem",
+    }
+  }
+>
+  <a
+    aria-current="page"
+    className="sidebar-root active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <div
+      style={
+        Object {
+          "animationName": "expandAvatar",
+          "backgroundImage": "url(http://link-butcher-2.herokuapp.com/MDE2YzE2)",
+        }
+      }
+    />
+    <p
+      style={
+        Object {
+          "padding": "10px 16px",
+        }
+      }
+    >
+      URL Shortener
+    </p>
+  </a>
+  <div
+    className="sidebar-tree "
+  >
+    <a
+      className="header-link"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "#666",
+          "flex": 1,
+          "fontWeight": "normal",
+        }
+      }
+    >
+      <i
+        className="fas fa-home"
+        style={Object {}}
+      />
+      <p>
+        Project Overview
+      </p>
+    </a>
+    <div
+      className="flyout"
+      style={Object {}}
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Progress
+      </a>
+      <a
+        aria-current={null}
+        href="/r"
+        onClick={[Function]}
+      >
+        Contributions
+      </a>
+      <a
+        aria-current={null}
+        href="/o"
+        onClick={[Function]}
+      >
+        Activity
+      </a>
+    </div>
+  </div>
+  <div
+    className="sidebar-tree "
+  >
+    <a
+      className="header-link"
+      href="/lo"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "#666",
+          "flex": 1,
+          "fontWeight": "normal",
+        }
+      }
+    >
+      <i
+        className="fas fa-burn"
+        style={Object {}}
+      />
+      <p>
+        Oil
+      </p>
+    </a>
+    <div
+      className="flyout"
+      style={Object {}}
+    >
+      <a
+        aria-current={null}
+        href="/lo"
+        onClick={[Function]}
+      >
+        Frytol
+      </a>
+      <a
+        aria-current={null}
+        href="/t"
+        onClick={[Function]}
+      >
+        Eno Serwaa
+      </a>
+      <a
+        aria-current={null}
+        href="/v"
+        onClick={[Function]}
+      >
+        Pepsi
+      </a>
+      <a
+        aria-current={null}
+        href="/u"
+        onClick={[Function]}
+      >
+        Soyabean
+      </a>
+    </div>
+  </div>
+  <div
+    className="sidebar-tree "
+  >
+    <a
+      className="header-link"
+      href="/g"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "#666",
+          "flex": 1,
+          "fontWeight": "normal",
+        }
+      }
+    >
+      <i
+        className="fas fa-brain"
+        style={Object {}}
+      />
+      <p>
+        Minds
+      </p>
+    </a>
+    <div
+      className="flyout"
+      style={Object {}}
+    >
+      <a
+        aria-current={null}
+        href="/g"
+        onClick={[Function]}
+      >
+        Sardine
+      </a>
+      <a
+        aria-current={null}
+        href="/j"
+        onClick={[Function]}
+      >
+        DHall Beast
+      </a>
+      <a
+        aria-current={null}
+        href="/d"
+        onClick={[Function]}
+      >
+        Last Killer
+      </a>
+      <a
+        aria-current={null}
+        href="/l"
+        onClick={[Function]}
+      >
+        Brilla
+      </a>
+      <a
+        aria-current={null}
+        href="/e"
+        onClick={[Function]}
+      >
+        Ant Brain
+      </a>
+    </div>
+  </div>
+  <div
+    className="collapse"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "15rem",
+      }
+    }
+  >
+    <i
+      className="fas fa-angle-double-left"
+    />
+    <p
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      Collapse sidebar
+    </p>
+  </div>
+</div>
+`;
