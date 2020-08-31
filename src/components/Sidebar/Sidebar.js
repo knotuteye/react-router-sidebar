@@ -8,7 +8,6 @@ function SidebarRoot({ routeTuple, headerOnCLick, collapsed, avatar }) {
       className="sidebar-root"
       activeClassName="active"
       to={routeTuple.route}
-      
       onClick={() => {
         headerOnCLick(routeTuple.route)
       }}
@@ -118,11 +117,10 @@ export default function ({ sideBarObject, initialRoute }) {
   function rebuildTree(auxRoute) {
     sideBarObject.routeTree.forEach((routeTreeObject, index) => {
       routeTreeObject.children.forEach((routeTuple) => {
-        if (auxRoute) {
-          if (routeTuple.route === auxRoute) {
-            setIndexOfActiveTreeHeader(index)
-          }
-        } else if (routeTuple.route === initialRoute) {
+        if (
+          (auxRoute && routeTuple.route === auxRoute) ||
+          routeTuple.route === initialRoute
+        ) {
           setIndexOfActiveTreeHeader(index)
         }
       })
