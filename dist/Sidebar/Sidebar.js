@@ -95,11 +95,7 @@ export default function ({
   function rebuildTree(auxRoute) {
     sideBarObject.routeTree.forEach((routeTreeObject, index) => {
       routeTreeObject.children.forEach(routeTuple => {
-        if (auxRoute) {
-          if (routeTuple.route === auxRoute) {
-            setIndexOfActiveTreeHeader(index);
-          }
-        } else if (routeTuple.route === initialRoute) {
+        if (auxRoute && routeTuple.route === auxRoute || routeTuple.route === initialRoute) {
           setIndexOfActiveTreeHeader(index);
         }
       });
