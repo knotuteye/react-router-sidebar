@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar'
 
@@ -9,9 +9,9 @@ export const sideBarObject = {
   routeTree: [
     {
       children: [
-        { name: 'Progress', route: '/' },
-        { name: 'Contributions', route: '/r' },
-        { name: 'Activity', route: '/o' },
+        { name: 'Progress', route: '/dashboard/' },
+        { name: 'Contributions', route: '/dashboard/r' },
+        { name: 'Activity', route: '/dashboard/o' },
       ],
       icon: 'home',
       name: 'Project Overview',
@@ -46,26 +46,40 @@ function RouteDemo({ children }) {
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Switch>
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Login}></Route>
+      </Switch>
+    </div>
+  )
+}
+
+function Login() {
+  return <Link to="/dashboard">Click here to Login</Link>
+}
+
+function Dashboard({ match }) {
+  return (
+    <div>
+      <div>
         <Sidebar
           sideBarObject={sideBarObject}
           initialRoute={window.location.pathname}
         ></Sidebar>
       </div>
       <Switch>
-        <Route path="/r">
+        <Route path={match.url + '/r'}>
           <RouteDemo>R</RouteDemo>
         </Route>
-        <Route path="/o">
+        <Route path={match.url + '/o'}>
           <RouteDemo>O</RouteDemo>
         </Route>
-        <Route path="/">
+        <Route path={match.url + '/'}>
           <RouteDemo>Home</RouteDemo>
         </Route>
       </Switch>
-    </Router>
+    </div>
   )
 }
-
 export default App
